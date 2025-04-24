@@ -1,6 +1,7 @@
 // components/IssueTable.tsx
-"use client";
+// "use client";
 import Link from "next/link";
+import Modal from "./Modal";
 
 type Issue = {
 	id: number;
@@ -23,7 +24,11 @@ const issues: Issue[] = [
 export default function IssueTable() {
 	return (
 		<>
-			<h1 className='text-2xl font-bold mb-4'>Project Name</h1>
+			<div className='flex max-w-5xl justify-between m-auto pb-4'>
+				<h1 className='text-2xl font-bold mb-4'>Project Name</h1>
+                <Modal />
+				{/* <Link href={'/issues/new'} className='btn btn-circle btn-accent text-xl'>+</Link> */}
+			</div>
 			<div className='overflow-x-auto rounded-xl shadow max-w-5xl m-auto'>
 				<table className='min-w-full bg-white text-sm text-left'>
 					<thead className='bg-zinc-900 text-gray-200 uppercase text-xs'>
