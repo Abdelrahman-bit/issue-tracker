@@ -15,6 +15,7 @@ const Navbar = () => {
 		});
 	}, []);
 	const { data: session } = useSession();
+	
 	const handleLogOut = () => {
 		signOut({ callbackUrl: "/" });
 	};
