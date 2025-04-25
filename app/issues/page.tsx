@@ -2,9 +2,14 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import Modal from "../components/Modal";
 import IssueTable from "../components/IssueTable";
+import { redirect } from "next/navigation";
+
 
 const Issues = async () => {
 	const  session  = await getServerSession(authOptions);
+	if(!session) {
+		redirect(`/api/auth/signin?callbackUrl`);
+	}
 	return (
 		<>
 			<div className='flex max-w-5xl justify-between m-auto pb-4 pt-5'>

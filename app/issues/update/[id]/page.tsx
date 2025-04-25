@@ -1,15 +1,21 @@
-import DropDown from "@/app/components/DropDown";
 import { getIssue, updateIssue } from "@/utils/db";
-import React from "react";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import DropDown from "@/app/components/DropDown";
+import { redirect } from "next/navigation";
 
 const updatePage = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const issue = await getIssue(id);
+  const session = await getServerSession(authOptions);
+  if (!session) {
+	redirect(`/api/auth/signin?callbackUrl`);
+  }
 	return (
 		<form action={updateIssue}>
 			<div className='w-full flex justify-center items-center mt-5'>
 				<div className='w-1/2 shadow-gray-500/30 shadow-xl flex flex-col space-y-5 bg-zinc-800 rounded-2xl p-6 '>
-					<h1 className='text-2xl'>New Issue</h1>
+					<h1 className='text-2xl'>Update Issue</h1>
 					<fieldset className='fieldset '>
 						<legend className='fieldset-legend '>Issue Title</legend>
 						<input type='hidden' name='id' value={issue?.id} />
