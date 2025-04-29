@@ -4,6 +4,8 @@ import NextAuth from "next-auth";
 import { AdapterUser } from "next-auth/adapters";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
+import { signIn } from "next-auth/react";
+import { pages } from "next/dist/build/templates/app-page";
 
 export const authOptions = {
 	providers: [
@@ -18,11 +20,11 @@ export const authOptions = {
 	],
 	callbacks: {
 		redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
-			// Allow relative URLs
+			// // Allow relative URLs
 			if (url.startsWith("/")) return `${baseUrl}${url}`;
-			// Allow URLs on the same origin
-			else if (new URL(url).origin === baseUrl) return url;
-			return baseUrl;
+			// // Allow URLs on the same origin
+			// else if (new URL(url).origin === baseUrl) return url;
+			return `${baseUrl}/issues`;
 		},
 
 		async signIn({ user } : any) {
@@ -46,6 +48,9 @@ export const authOptions = {
 			// Return true to allow sign-in
 			return true;
 		},
+	},
+	pages:{
+		signIn: "/auth/signin",
 	},
 	secret: process.env.NEXTAUTH_SECRET,
 };

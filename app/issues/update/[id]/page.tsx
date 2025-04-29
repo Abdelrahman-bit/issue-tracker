@@ -14,7 +14,7 @@ const updatePage = async ({ params }: { params: Promise<{ id: string }> }) => {
 	return (
 		<form action={updateIssue}>
 			<div className='w-full flex justify-center items-center mt-5'>
-				<div className='w-1/2 shadow-gray-500/30 shadow-xl flex flex-col space-y-5 bg-zinc-800 rounded-2xl p-6 '>
+				<div className='w-full lg:w-1/2 lg:shadow-gray-500/30 shadow-xl flex flex-col space-y-5 bg-zinc-800 lg:rounded-2xl p-6 '>
 					<h1 className='text-2xl'>Update Issue</h1>
 					<fieldset className='fieldset '>
 						<legend className='fieldset-legend '>Issue Title</legend>
@@ -41,6 +41,9 @@ const updatePage = async ({ params }: { params: Promise<{ id: string }> }) => {
 					<button type='submit' className='btn btn-accent my-3'>
 						Update
 					</button>
+					<a href='/issues' className='btn btn-active'>
+						Back
+					</a>
 				</div>
 			</div>
 		</form>

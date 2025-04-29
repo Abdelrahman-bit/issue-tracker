@@ -17,7 +17,7 @@ const Modal = () => {
 	};
 
 	return (
-		<div className=''>
+		<div>
 			{/* The button to open modal */}
 			<label htmlFor='my_modal_7' className='btn btn-circle btn-accent text-xl'>
 				+
@@ -25,10 +25,10 @@ const Modal = () => {
 
 			{/* Modal */}
 			<input type='checkbox' id='my_modal_7' className='modal-toggle w-full' />
-			<div className='modal m-' role='dialog'>
+			<div className='modal w-full' role='dialog'>
 				<Form
 					action={handleSubmit}
-					className='modal-box w-1/3 shadow-gray-500/30 shadow-xl flex flex-col bg-zinc-800 rounded-2xl p-6'
+					className='modal-box w-9/10 lg:w-1/3 shadow-gray-500/30 shadow-xl flex flex-col bg-zinc-800 rounded-2xl p-6'
 				>
 					<h1 className='text-2xl'>New Issue</h1>
 					<fieldset className='fieldset'>
