@@ -14,8 +14,8 @@ const IssueDetails = async ({ params }: { params: Promise<{ issueId: string }> }
 		return <div className='text-center text-2xl'>Issue not found</div>;
 	}
 	return (
-		<div className='w-full flex justify-center items-center mt-5 mx-3'>
-			<div className='w-full lg:w-1/2 flex flex-col space-y-15 bg-zinc-800 rounded-2xl p-6 '>
+		<div className='flex justify-center items-center mt-5 lg:mx-3'>
+			<div className='w-9/10 lg:w-1/2 flex flex-col space-y-15 bg-zinc-800 rounded-2xl lg:p-6 p-3 '>
 				<h1 className='text-3xl'> {issue?.title} </h1>
 				<h2 className='text-2xl'> {issue?.description} </h2>
 
