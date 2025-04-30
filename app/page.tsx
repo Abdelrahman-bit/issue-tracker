@@ -6,6 +6,7 @@ export default function Home() {
       <p>Your one-stop solution for managing issues efficiently.</p>
       <p>Sign in to your account to access all features.</p>
       <p>Happy tracking!</p>
+      <a href="/issues" className="btn btn-accent w-3xs">View Issues ➡ </a>
     </div>
   );
 }
