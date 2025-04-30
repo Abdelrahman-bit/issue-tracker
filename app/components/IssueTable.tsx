@@ -37,7 +37,7 @@ const IssueTable = async () => {
 								</span>
 							</td>
 							<td>
-								<div className='flex space-x-2 align-center justify-center lg:space-x-4'>
+								<div className='flex space-x-5 align-center justify-center lg:space-x-4'>
 									<a
 										href={`/issues/update/${issue.id}`}
 										className='btn btn-warning p-1 h-5 text-xs lg:p-5 lg:text-md'
