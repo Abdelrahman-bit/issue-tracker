@@ -29,7 +29,7 @@ const IssueTable = async () => {
 							</td>
 							<td className='px-3 lg:px-6 py-1 lg:py-3 flex items-center justify-between'>
 								<span
-									className={`px-2 py-1 rounded-full text-[.61rem] lg:font-medium lg:py-3 lg:text-[.8rem] lg:px-5 ${
+									className={`px-2 py-1 rounded-full text-[.61rem] lg:font-medium lg:py-2 lg:text-[.75rem] lg:px-4 ${
 										statusColors[issue.status]
 									}`}
 								>
