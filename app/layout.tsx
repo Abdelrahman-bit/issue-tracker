@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: "Issue Tracker",
 	description: "A simple issue tracking application",
+	icons: {
+		icon: '/favicon.png'
+	}
 };
 
 export default function RootLayout({
