@@ -36,7 +36,6 @@ const Issues = async () => {
 	// 		}
 	// 	}
 	// });
-	console.log(issuesCount)
 	return (
 		<>
 			<div className='flex max-w-5xl justify-between m-auto p-4'>

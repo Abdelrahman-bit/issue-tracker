@@ -37,16 +37,16 @@ const IssueTable = async () => {
 								</span>
 							</td>
 							<td>
-								<div className='flex space-x-5 align-center justify-center lg:space-x-4'>
+								<div className='flex items-start w-fit lg:space-x-4 px-3 pl-6'>
 									<a
 										href={`/issues/update/${issue.id}`}
-										className='btn btn-warning p-1 h-5 text-xs lg:p-5 lg:text-md'
+										className='btn btn-warning hidden p-1 h-5 text-xs lg:p-5 lg:text-md lg:block'
 									>
 										<img src='/edit.png' alt='Edit' className='w-3 h-3' />
 									</a>
 									<form action={deleteIssue}>
 										<input type='hidden' name='id' value={issue.id} />
-										<button type='submit' className='btn btn-error p-1 text-xs h-5 lg:p-5 lg:text-md'>
+										<button type='submit' className='btn btn-error p-2 text-xs h-5 lg:p-5 lg:text-md'>
 											X
 										</button>
 									</form>
