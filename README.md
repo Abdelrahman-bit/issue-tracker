@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐞 Issue Tracker
 
-## Getting Started
+A full-featured **Issue Tracker** built with **Next.js 15**, **Prisma ORM**, and **NextAuth**, designed to help teams manage, assign, and track software issues efficiently.  
+This app combines robust authentication, modern UI, and a scalable backend to deliver a seamless project management experience.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | React 19, Next.js 15 (App Router), Tailwind CSS, DaisyUI |
+| **Backend** | Next.js API Routes, Prisma ORM |
+| **Database** | PostgreSQL |
+| **Authentication** | NextAuth.js (GitHub, Google Providers) |
+| **Deployment** | Vercel |
+| **Language** | TypeScript |
+
+---
+
+## ✨ Features
+
+✅ **User Authentication** – Secure login with GitHub & Google using NextAuth  
+✅ **Issue Management** – Create, assign, edit, and close issues  
+✅ **Role-based Permissions** – Control access and actions for different users  
+✅ **Modern UI** – Responsive interface powered by Tailwind CSS & DaisyUI  
+✅ **Database Integration** – Fully synced with PostgreSQL via Prisma ORM  
+✅ **Real-time Updates (Optional)** – Extendable with WebSocket or Pusher  
+✅ **Deployed on Vercel** – Fast, serverless, and production-ready
+
+---
+
+## 🧩 Project Structure
+
+├── app/
+│ ├── api/ # Next.js API routes
+│ ├── auth/ # NextAuth configuration
+│ ├── issues/ # Issue pages & components
+│ └── layout.tsx # Root layout
+├── prisma/
+│ └── schema.prisma # Prisma data models
+├── public/ # Static assets
+├── styles/ # Global styles (Tailwind)
+├── package.json
+└── README.md
+
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/issue-tracker.git
+cd issue-tracker
+npm install
+```
+Create a .env.local file in the root directory:
+
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your_secret_key"
+GITHUB_ID="your_github_client_id"
+GITHUB_SECRET="your_github_client_secret"
+GOOGLE_CLIENT_ID="your_google_client_id"
+GOOGLE_CLIENT_SECRET="your_google_client_secret"
 
 ```bash
+npx prisma migrate dev
+npx prisma generate
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⭐ Future Enhancements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📊 Dashboard & Analytics
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📨 Email notifications (Resend integration)
 
-## Learn More
+🧩 Comment system on issues
 
-To learn more about Next.js, take a look at the following resources:
+🔔 Real-time updates with WebSocket
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧠 AI-powered issue categorization (experimental)
