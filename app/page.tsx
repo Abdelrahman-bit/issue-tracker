@@ -61,7 +61,7 @@ export default function Home() {
 								</svg>
 							</a>
 						</div>
-						<p className='text-sm text-zinc-500'>Happy tracking! 🚀</p>
+						<p className='text-sm text-zinc-500'>Happy tracking! </p>
 					</div>
 				</div>
 			</div>
